@@ -1,11 +1,149 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Get Up And Play</title>
+  <meta name="description" content="Games, training, and programs built to get people moving." />
+
+  <!-- Favicons (we’ll add the actual files next) -->
+  <link rel="icon" href="/assets/favicons/favicon-32.png" sizes="32x32" />
+  <link rel="icon" href="/assets/favicons/favicon-16.png" sizes="16x16" />
+  <link rel="apple-touch-icon" href="/assets/favicons/apple-touch-180.png" />
+
+  <link rel="stylesheet" href="/assets/css/style.css" />
 </head>
 <body>
-  <h1>Get Up And Play</h1>
-  <p>Repo structure is live.</p>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="/index.html" aria-label="Get Up And Play Home">
+        <!-- TEMP placeholder until you upload logo -->
+        <div class="brand-placeholder">Get Up And Play</div>
+      </a>
+
+      <nav class="nav" aria-label="Primary">
+        <a href="/index.html" class="is-active">Home</a>
+        <a href="/about.html">About</a>
+        <a href="/beteyah/index.html">Beteyah</a>
+        <a href="/training.html">Training</a>
+        <a href="/programs.html">Programs</a>
+        <a href="/gallery.html">Gallery</a>
+        <a href="/contact.html" class="btn small">Contact</a>
+      </nav>
+
+      <button class="nav-toggle" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+
+    <div class="mobile-nav" hidden>
+      <a href="/index.html" class="is-active">Home</a>
+      <a href="/about.html">About</a>
+      <a href="/beteyah/index.html">Beteyah</a>
+      <a href="/training.html">Training</a>
+      <a href="/programs.html">Programs</a>
+      <a href="/gallery.html">Gallery</a>
+      <a href="/contact.html">Contact</a>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero Slideshow (placeholders until you upload Beteyah images) -->
+    <section class="hero">
+      <div class="hero-slides" data-slideshow>
+        <div class="slide is-active" style="background-image:url('/assets/img/slide-1.jpg')"></div>
+        <div class="slide" style="background-image:url('/assets/img/slide-2.jpg')"></div>
+        <div class="slide" style="background-image:url('/assets/img/slide-3.jpg')"></div>
+      </div>
+
+      <div class="hero-overlay">
+        <div class="container hero-content">
+          <h1>Get Up And Play</h1>
+          <p>
+            A sports and activity platform built to get people moving—through games, training, and programs.
+          </p>
+          <div class="hero-actions">
+            <a class="btn" href="/beteyah/index.html">Explore Beteyah</a>
+            <a class="btn ghost" href="/contact.html">Partner with us</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <h2>Why Get Up And Play Exists</h2>
+        <p class="lead">
+          Movement is getting replaced by screens, and too many kids feel like sports aren’t “for them.” We’re here to change that.
+        </p>
+        <ul class="bullets">
+          <li>Make activity <strong>fun and accessible</strong></li>
+          <li>Build <strong>confidence</strong> through play</li>
+          <li>Support <strong>coaches and PE teachers</strong> with simple resources</li>
+          <li>Create <strong>games and training</strong> that work anywhere</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section alt">
+      <div class="container">
+        <h2>What We Build</h2>
+        <div class="cards">
+          <a class="card" href="/beteyah/index.html">
+            <h3>Games & Equipment</h3>
+            <p>Innovative sports products like Beteyah designed for play anywhere.</p>
+            <span class="card-link">Learn about Beteyah →</span>
+          </a>
+
+          <a class="card" href="/training.html">
+            <h3>Training & Movement</h3>
+            <p>Simple routines and drills that build athleticism without fancy equipment.</p>
+            <span class="card-link">View Training →</span>
+          </a>
+
+          <a class="card" href="/programs.html">
+            <h3>Programs & Education</h3>
+            <p>Resources built for schools, camps, teams, and community organizations.</p>
+            <span class="card-link">Explore Programs →</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <h2>Built for</h2>
+        <div class="grid">
+          <div class="chip">Schools & PE Programs</div>
+          <div class="chip">Coaches & Camps</div>
+          <div class="chip">Families & Youth Athletes</div>
+          <div class="chip">Community Organizations</div>
+        </div>
+        <p class="muted" style="margin-top:14px;">
+          If your goal is to get people active, we’re building tools to help.
+        </p>
+      </div>
+    </section>
+
+    <section class="cta">
+      <div class="container cta-inner">
+        <div>
+          <h2>Bring Get Up And Play to your program</h2>
+          <p>Interested in Beteyah, partnerships, or activity resources for your community?</p>
+        </div>
+        <a class="btn" href="/contact.html">Contact Us</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© <span id="year"></span> Get Up And Play. All rights reserved.</p>
+      <a href="/contact.html">info@getupandplay.com</a>
+    </div>
+  </footer>
+
+  <script src="/assets/js/main.js"></script>
 </body>
 </html>
