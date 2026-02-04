@@ -6,10 +6,10 @@
   <title>Get Up And Play</title>
   <meta name="description" content="Games, training, and programs built to get people moving." />
 
-  <!-- Favicons (we’ll add the actual files next) -->
-  <link rel="icon" href="/assets/favicons/favicon-32.png" sizes="32x32" />
-  <link rel="icon" href="/assets/favicons/favicon-16.png" sizes="16x16" />
-  <link rel="apple-touch-icon" href="/assets/favicons/apple-touch-180.png" />
+  <!-- Favicons (we’ll upload these files next) -->
+  <link rel="icon" href="assets/favicons/favicon-32.png" sizes="32x32" />
+  <link rel="icon" href="assets/favicons/favicon-16.png" sizes="16x16" />
+  <link rel="apple-touch-icon" href="assets/favicons/apple-touch-180.png" />
 
   <link rel="stylesheet" href="assets/css/style.css" />
 </head>
@@ -17,19 +17,19 @@
 
   <header class="site-header">
     <div class="container header-inner">
-      <a class="brand" href="/index.html" aria-label="Get Up And Play Home">
-        <!-- TEMP placeholder until you upload logo -->
+      <a class="brand" href="index.html" aria-label="Get Up And Play Home">
+        <!-- Replace this later with your real logo image -->
         <div class="brand-placeholder">Get Up And Play</div>
       </a>
 
       <nav class="nav" aria-label="Primary">
-        <a href="/index.html" class="is-active">Home</a>
-        <a href="/about.html">About</a>
-        <a href="/beteyah/index.html">Beteyah</a>
-        <a href="/training.html">Training</a>
-        <a href="/programs.html">Programs</a>
-        <a href="/gallery.html">Gallery</a>
-        <a href="/contact.html" class="btn small">Contact</a>
+        <a href="index.html" class="is-active">Home</a>
+        <a href="about.html">About</a>
+        <a href="beteyah/index.html">Beteyah</a>
+        <a href="training.html">Training</a>
+        <a href="programs.html">Programs</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="contact.html" class="btn small">Contact</a>
       </nav>
 
       <button class="nav-toggle" aria-label="Open menu" aria-expanded="false">
@@ -38,39 +38,66 @@
     </div>
 
     <div class="mobile-nav" hidden>
-      <a href="/index.html" class="is-active">Home</a>
-      <a href="/about.html">About</a>
-      <a href="/beteyah/index.html">Beteyah</a>
-      <a href="/training.html">Training</a>
-      <a href="/programs.html">Programs</a>
-      <a href="/gallery.html">Gallery</a>
-      <a href="/contact.html">Contact</a>
+      <a href="index.html" class="is-active">Home</a>
+      <a href="about.html">About</a>
+      <a href="beteyah/index.html">Beteyah</a>
+      <a href="training.html">Training</a>
+      <a href="programs.html">Programs</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="contact.html">Contact</a>
     </div>
   </header>
 
   <main>
-    <!-- Hero Slideshow (placeholders until you upload Beteyah images) -->
+    <!-- HERO SLIDESHOW (placeholders until you upload images to assets/img/) -->
     <section class="hero">
       <div class="hero-slides" data-slideshow>
-        <div class="slide is-active" style="background-image:url('/assets/img/slide-1.jpg')"></div>
-        <div class="slide" style="background-image:url('/assets/img/slide-2.jpg')"></div>
-        <div class="slide" style="background-image:url('/assets/img/slide-3.jpg')"></div>
+        <div class="slide is-active" style="background-image:url('assets/img/slide-1.jpg')"></div>
+        <div class="slide" style="background-image:url('assets/img/slide-2.jpg')"></div>
+        <div class="slide" style="background-image:url('assets/img/slide-3.jpg')"></div>
       </div>
 
       <div class="hero-overlay">
         <div class="container hero-content">
-          <h1>Get Up And Play</h1>
-          <p>
-            A sports and activity platform built to get people moving—through games, training, and programs.
-          </p>
-          <div class="hero-actions">
-            <a class="btn" href="/beteyah/index.html">Explore Beteyah</a>
-            <a class="btn ghost" href="/contact.html">Partner with us</a>
+          <div class="hero-card">
+            <h1>Get Up And Play</h1>
+            <p>
+              A sports and activity platform built to get people moving—through games, training, and programs.
+            </p>
+            <div class="hero-actions">
+              <a class="btn" href="beteyah/index.html">Explore Beteyah</a>
+              <a class="btn ghost" href="contact.html">Partner with us</a>
+            </div>
+
+            <div class="hero-badges">
+              <span class="badge">Move More</span>
+              <span class="badge">Play Anywhere</span>
+              <span class="badge">Built for Groups</span>
+            </div>
           </div>
         </div>
       </div>
     </section>
 
+    <!-- STATS STRIP -->
+    <section class="stats">
+      <div class="container stats-inner">
+        <div class="stat">
+          <div class="stat-num">Move More</div>
+          <div class="stat-label">Simple tools that promote activity</div>
+        </div>
+        <div class="stat">
+          <div class="stat-num">Play Anywhere</div>
+          <div class="stat-label">Small-space games & training</div>
+        </div>
+        <div class="stat">
+          <div class="stat-num">Built for Groups</div>
+          <div class="stat-label">Schools, camps, teams, families</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- MISSION -->
     <section class="section">
       <div class="container">
         <h2>Why Get Up And Play Exists</h2>
@@ -86,23 +113,24 @@
       </div>
     </section>
 
+    <!-- PILLARS -->
     <section class="section alt">
       <div class="container">
         <h2>What We Build</h2>
         <div class="cards">
-          <a class="card" href="/beteyah/index.html">
+          <a class="card" href="beteyah/index.html">
             <h3>Games & Equipment</h3>
             <p>Innovative sports products like Beteyah designed for play anywhere.</p>
             <span class="card-link">Learn about Beteyah →</span>
           </a>
 
-          <a class="card" href="/training.html">
+          <a class="card" href="training.html">
             <h3>Training & Movement</h3>
             <p>Simple routines and drills that build athleticism without fancy equipment.</p>
             <span class="card-link">View Training →</span>
           </a>
 
-          <a class="card" href="/programs.html">
+          <a class="card" href="programs.html">
             <h3>Programs & Education</h3>
             <p>Resources built for schools, camps, teams, and community organizations.</p>
             <span class="card-link">Explore Programs →</span>
@@ -111,6 +139,7 @@
       </div>
     </section>
 
+    <!-- AUDIENCE -->
     <section class="section">
       <div class="container">
         <h2>Built for</h2>
@@ -126,13 +155,16 @@
       </div>
     </section>
 
+    <!-- CTA -->
     <section class="cta">
-      <div class="container cta-inner">
-        <div>
-          <h2>Bring Get Up And Play to your program</h2>
-          <p>Interested in Beteyah, partnerships, or activity resources for your community?</p>
+      <div class="container">
+        <div class="cta-inner">
+          <div>
+            <h2>Bring Get Up And Play to your program</h2>
+            <p>Interested in Beteyah, partnerships, or activity resources for your community?</p>
+          </div>
+          <a class="btn" href="contact.html">Contact Us</a>
         </div>
-        <a class="btn" href="/contact.html">Contact Us</a>
       </div>
     </section>
   </main>
@@ -140,7 +172,7 @@
   <footer class="site-footer">
     <div class="container footer-inner">
       <p>© <span id="year"></span> Get Up And Play. All rights reserved.</p>
-      <a href="/contact.html">info@getupandplay.com</a>
+      <a href="contact.html">info@getupandplay.com</a>
     </div>
   </footer>
 
