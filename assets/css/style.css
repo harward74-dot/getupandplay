@@ -364,9 +364,42 @@ h2{
 
 /* RESPONSIVE */
 @media (max-width: 900px){
+  /* Hide desktop nav completely on mobile */
   .nav{ display:none; }
+
+  /* Show hamburger */
   .nav-toggle{ display:flex; }
+
+  /* IMPORTANT: mobile menu should be hidden by default
+     and only shown when JS removes the [hidden] attribute */
   .mobile-nav{ display:block; }
+  .mobile-nav[hidden]{ display:none; }
+
+  /* Make header layout tighter */
+  .header-inner{
+    padding:10px 0;
+  }
+
+  /* Stack sections nicely */
+  .cards{ grid-template-columns:1fr; }
+  .grid{ grid-template-columns:1fr 1fr; }
+  .stats-inner{ grid-template-columns:1fr; }
+  .cta-inner{ flex-direction:column; align-items:flex-start; }
+}
+
+@media (max-width: 600px){
+  .hero{ min-height: 78vh; }
+  .hero-card{ padding:16px; }
+  .hero h1{ font-size: 36px; }
+  .hero p{ font-size: 16px; }
+  .hero-actions{ flex-direction: column; }
+  .hero-actions .btn{ width: 100%; }
+  .stats{ margin-top:-10px; }
+  .stat{ text-align:left; }
+  .section{ padding:48px 0; }
+  .cta{ padding:48px 0; }
+}
+}
   .cards{ grid-template-columns:1fr; }
   .grid{ grid-template-columns:1fr 1fr; }
   .stats-inner{ grid-template-columns:1fr; }
