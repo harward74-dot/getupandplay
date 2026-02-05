@@ -469,3 +469,25 @@ h2{
 .site-header{
   position: sticky;
 }
+/* Mobile menu: hidden unless toggled */
+.mobile-nav{
+  display:block;
+  background:#fff;
+  border-top:1px solid var(--line);
+  padding:10px 20px 16px;
+}
+.mobile-nav[hidden]{ display:none; }
+
+/* Make the dropdown feel intentional */
+@media (max-width: 900px){
+  .site-header{ position:sticky; }
+  .mobile-nav{
+    position:absolute;
+    left:0;
+    right:0;
+    top:100%;
+    box-shadow: 0 20px 60px rgba(0,0,0,.12);
+  }
+  .nav{ display:none; }
+  .nav-toggle{ display:flex; }
+}
