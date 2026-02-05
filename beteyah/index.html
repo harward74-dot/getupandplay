@@ -1,1 +1,539 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Beteyah | Get Up And Play</title>
+  <meta name="description" content="Beteyah is a fast, fun, play-anywhere bat-and-cap game built for families, schools, and camps." />
+
+  <link rel="icon" href="../assets/favicons/favicon-32.png" sizes="32x32" />
+  <link rel="icon" href="../assets/favicons/favicon-16.png" sizes="16x16" />
+  <link rel="apple-touch-icon" href="../assets/favicons/apple-touch-180.png" />
+
+  <link rel="stylesheet" href="../assets/css/style.css" />
+
+  <style>
+    .page-hero{
+      padding: 46px 0 22px;
+      background:
+        radial-gradient(900px 420px at 12% 20%, rgba(32,176,240,.18), transparent 60%),
+        radial-gradient(900px 420px at 85% 40%, rgba(138,43,226,.12), transparent 60%),
+        linear-gradient(180deg, #fff, var(--bg2));
+      border-bottom:1px solid var(--line);
+    }
+    .page-hero-grid{
+      display:grid;
+      grid-template-columns: 1.2fr .8fr;
+      gap:18px;
+      align-items:stretch;
+    }
+    .hero-box{
+      border:1px solid var(--line);
+      border-radius:24px;
+      background:#fff;
+      box-shadow: var(--shadow);
+      padding:20px;
+    }
+    .kicker{
+      display:inline-flex;
+      gap:8px;
+      align-items:center;
+      padding:8px 12px;
+      border-radius:999px;
+      border:1px solid var(--line);
+      font-weight:900;
+      background: rgba(32,176,240,.08);
+    }
+    .hero-title{
+      margin:12px 0 10px;
+      font-size: clamp(30px, 4vw, 44px);
+      letter-spacing:-.03em;
+    }
+    .hero-sub{
+      margin:0 0 14px;
+      color: rgba(17,19,24,.78);
+      font-size: 16.5px;
+      line-height:1.6;
+      max-width: 62ch;
+    }
+    .hero-actions{
+      display:flex;
+      gap:12px;
+      flex-wrap:wrap;
+      margin-top:12px;
+    }
+    .hero-actions .btn.ghost{
+      background:#fff;
+      color:var(--text);
+      border:1px solid var(--line);
+      box-shadow:none;
+    }
+    .hero-side{
+      display:flex;
+      flex-direction:column;
+      gap:12px;
+    }
+    .mini{
+      border:1px solid var(--line);
+      border-radius:18px;
+      background:#fff;
+      box-shadow: var(--shadow);
+      padding:14px;
+    }
+    .mini h3{
+      margin:0 0 6px;
+      font-size:16px;
+      letter-spacing:-.01em;
+    }
+    .mini p{
+      margin:0;
+      color: rgba(17,19,24,.72);
+      font-weight:600;
+      line-height:1.5;
+    }
+
+    .media{
+      padding: 34px 0;
+      background:#fff;
+    }
+    .media-top{
+      display:flex;
+      align-items:flex-end;
+      justify-content:space-between;
+      gap:14px;
+      flex-wrap:wrap;
+      margin-bottom:14px;
+    }
+    .media-top p{
+      margin:0;
+      color: rgba(17,19,24,.72);
+      font-weight:650;
+      max-width: 70ch;
+    }
+    .grid-media{
+      display:grid;
+      grid-template-columns: repeat(12, 1fr);
+      gap:12px;
+    }
+    .tile{
+      border:1px solid var(--line);
+      border-radius:18px;
+      background: linear-gradient(135deg, rgba(32,176,240,.18), rgba(138,43,226,.10));
+      box-shadow: var(--shadow);
+      overflow:hidden;
+      position:relative;
+      min-height: 160px;
+      display:flex;
+      align-items:flex-end;
+      padding:14px;
+      color: rgba(17,19,24,.78);
+      font-weight:900;
+      letter-spacing:-.01em;
+    }
+    .tile:before{
+      content:"";
+      position:absolute;
+      inset:0;
+      background: radial-gradient(600px 260px at 25% 25%, rgba(255,255,255,.35), transparent 55%);
+      pointer-events:none;
+    }
+    .tile span{ position:relative; }
+    .tile.big{ grid-column: span 7; min-height: 320px; }
+    .tile.small{ grid-column: span 5; }
+    .tile.third{ grid-column: span 4; min-height: 180px; }
+
+    /* Swap these images later by uploading files into assets/img/ */
+    .tile.big{ background-image:url('../assets/img/beteyah-1.jpg'); background-size:cover; background-position:center; }
+    .tile.small{ background-image:url('../assets/img/beteyah-2.jpg'); background-size:cover; background-position:center; }
+    .tile.third.t3{ background-image:url('../assets/img/beteyah-3.jpg'); background-size:cover; background-position:center; }
+    .tile.third.t4{ background-image:url('../assets/img/beteyah-4.jpg'); background-size:cover; background-position:center; }
+    .tile.third.t5{ background-image:url('../assets/img/beteyah-5.jpg'); background-size:cover; background-position:center; }
+
+    .overlay-label{
+      background:rgba(255,255,255,.82);
+      border:1px solid rgba(255,255,255,.65);
+      backdrop-filter: blur(8px);
+      padding:8px 10px;
+      border-radius:999px;
+      display:inline-flex;
+      gap:8px;
+      align-items:center;
+      box-shadow: 0 14px 40px rgba(0,0,0,.16);
+    }
+
+    .how-grid{
+      display:grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap:14px;
+      margin-top:16px;
+    }
+    .how{
+      border:1px solid var(--line);
+      border-radius:18px;
+      background:#fff;
+      box-shadow: var(--shadow);
+      padding:16px;
+      position:relative;
+      overflow:hidden;
+    }
+    .how:before{
+      content:"";
+      position:absolute;
+      inset:-40% -40% auto auto;
+      width:220px;
+      height:220px;
+      background: radial-gradient(circle, rgba(32,176,240,.16), transparent 60%);
+      transform: rotate(12deg);
+    }
+    .how:nth-child(2):before{ background: radial-gradient(circle, rgba(138,43,226,.12), transparent 60%); }
+    .how:nth-child(3):before{ background: radial-gradient(circle, rgba(32,176,240,.10), transparent 60%); }
+    .how *{ position:relative; }
+    .how h3{ margin:0 0 8px; font-size:18px; }
+    .how p{ margin:0; color: rgba(17,19,24,.74); font-weight:650; }
+
+    .products{
+      display:grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap:14px;
+      margin-top:18px;
+    }
+    .product{
+      border:1px solid var(--line);
+      border-radius:18px;
+      background:#fff;
+      box-shadow: var(--shadow);
+      padding:16px;
+      display:flex;
+      flex-direction:column;
+      gap:10px;
+      overflow:hidden;
+      position:relative;
+    }
+    .product:before{
+      content:"";
+      position:absolute;
+      inset:-40% -40% auto auto;
+      width:240px;
+      height:240px;
+      background: radial-gradient(circle, rgba(32,176,240,.14), transparent 60%);
+      transform: rotate(12deg);
+    }
+    .product *{ position:relative; }
+
+    .badge{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      padding:6px 10px;
+      border-radius:999px;
+      font-weight:900;
+      border:1px solid var(--line);
+      background:#fff;
+      color: rgba(17,19,24,.78);
+      width:max-content;
+    }
+    .price-row{
+      display:flex;
+      align-items:baseline;
+      justify-content:space-between;
+      gap:10px;
+      padding:10px 12px;
+      border-radius:14px;
+      border:1px solid var(--line);
+      background: rgba(246,247,249,.75);
+    }
+    .price{
+      font-weight:1000;
+      font-size:22px;
+      letter-spacing:-.02em;
+    }
+    .product h3{ margin:0; font-size:18px; letter-spacing:-.01em; }
+    .product p{
+      margin:0;
+      color: rgba(17,19,24,.74);
+      font-weight:650;
+      line-height:1.55;
+    }
+    .product ul{
+      margin:0;
+      padding-left:18px;
+      color: rgba(17,19,24,.76);
+      font-weight:650;
+      line-height:1.55;
+    }
+    .product .btn{ width:100%; }
+
+    .who{
+      display:grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap:12px;
+      margin-top:16px;
+    }
+    .who .chip{
+      border-radius:18px;
+      text-align:left;
+      padding:14px 14px;
+      font-weight:900;
+      background:#fff;
+      border:1px solid var(--line);
+      box-shadow: var(--shadow);
+    }
+    .who .chip small{
+      display:block;
+      font-weight:650;
+      color: rgba(17,19,24,.70);
+      margin-top:6px;
+      line-height:1.45;
+    }
+
+    .faq{
+      display:grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap:14px;
+      margin-top:18px;
+    }
+
+    @media (max-width: 900px){
+      .page-hero-grid{ grid-template-columns: 1fr; }
+      .grid-media{ grid-template-columns: 1fr; }
+      .tile.big, .tile.small, .tile.third{ grid-column: auto; }
+      .tile.big{ min-height: 240px; }
+      .tile.small{ min-height: 200px; }
+      .how-grid{ grid-template-columns:1fr; }
+      .products{ grid-template-columns:1fr; }
+      .who{ grid-template-columns:1fr; }
+      .faq{ grid-template-columns:1fr; }
+    }
+  </style>
+</head>
+
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="../index.html" aria-label="Get Up And Play Home">
+        <div class="brand-placeholder">Get Up And Play</div>
+      </a>
+
+      <nav class="nav" aria-label="Primary">
+        <a href="../index.html">Home</a>
+        <a href="../about.html">About</a>
+        <a href="index.html" class="is-active">Beteyah</a>
+        <a href="../training.html">Training</a>
+        <a href="../programs.html">Programs</a>
+        <a href="../gallery.html">Gallery</a>
+        <a href="../contact.html" class="btn small">Contact</a>
+      </nav>
+
+      <button class="nav-toggle" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+
+    <div class="mobile-nav" hidden>
+      <a href="../index.html">Home</a>
+      <a href="../about.html">About</a>
+      <a href="index.html" class="is-active">Beteyah</a>
+      <a href="../training.html">Training</a>
+      <a href="../programs.html">Programs</a>
+      <a href="../gallery.html">Gallery</a>
+      <a href="../contact.html">Contact</a>
+    </div>
+  </header>
+
+  <section class="page-hero">
+    <div class="container page-hero-grid">
+      <div class="hero-box">
+        <div class="kicker">⚾ Family-friendly • Play anywhere</div>
+        <h1 class="hero-title">Beteyah</h1>
+        <p class="hero-sub">
+          A fast, fun bat-and-cap game that gets kids moving. Easy to learn, exciting to play, and perfect for backyards,
+          parks, gyms, and family game nights.
+        </p>
+
+        <div class="hero-actions">
+          <a class="btn" href="order.html">Buy Beteyah</a>
+          <a class="btn ghost" href="#pricing">See Sets & Pricing</a>
+        </div>
+      </div>
+
+      <div class="hero-side">
+        <div class="mini">
+          <h3>✅ Kids stay active</h3>
+          <p>Quick rounds, lots of reps, and movement built into every game.</p>
+        </div>
+        <div class="mini">
+          <h3>✅ Easy setup</h3>
+          <p>Works in small spaces—no full field required.</p>
+        </div>
+        <div class="mini">
+          <h3>✅ Fun for families</h3>
+          <p>Simple rules, real competition, and laughs guaranteed.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="media">
+    <div class="container">
+      <div class="media-top">
+        <div>
+          <h2>See Beteyah in Action</h2>
+          <p>We’ll swap in real photos tomorrow—this grid is already wired for it.</p>
+        </div>
+        <a class="btn ghost" href="#pricing">Jump to pricing</a>
+      </div>
+
+      <div class="grid-media">
+        <div class="tile big"><span class="overlay-label">Family game night vibe</span></div>
+        <div class="tile small"><span class="overlay-label">Backyard & park play</span></div>
+        <div class="tile third t3"><span class="overlay-label">Easy setup</span></div>
+        <div class="tile third t4"><span class="overlay-label">Kids love it</span></div>
+        <div class="tile third t5"><span class="overlay-label">Play anywhere</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <h2>How it works</h2>
+      <p class="lead">Simple enough for kids to learn fast. Fun enough that adults get competitive too.</p>
+
+      <div class="how-grid">
+        <div class="how">
+          <h3>Setup in minutes</h3>
+          <p>Use a yard, a driveway, a gym, or a park. Create a target/zone and you’re ready.</p>
+        </div>
+        <div class="how">
+          <h3>Hit the cap</h3>
+          <p>Quick swings, controlled contact, and tons of reps for hand-eye coordination.</p>
+        </div>
+        <div class="how">
+          <h3>Play together</h3>
+          <p>Perfect for family games, birthdays, neighborhood tournaments, and more.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section alt" id="pricing">
+    <div class="container">
+      <h2>Sets & Pricing</h2>
+      <p class="lead">Pick a set and you’re ready to play. (Flat-rate pricing for now — adjustable later.)</p>
+
+      <div class="products">
+        <div class="product">
+          <div class="badge">Best for first-timers</div>
+          <h3>Beteyah Starter Set</h3>
+          <div class="price-row"><div class="price">$10</div><div class="badge">Easy start</div></div>
+          <p>Great for families trying Beteyah for the first time.</p>
+          <ul>
+            <li>Everything you need to get going</li>
+            <li>Perfect for backyard play</li>
+            <li>Easy to pack & travel</li>
+          </ul>
+          <a class="btn" href="order.html?product=starter">Buy Starter</a>
+        </div>
+
+        <div class="product">
+          <div class="badge">Most popular</div>
+          <h3>Beteyah Combo Kit</h3>
+          <div class="price-row"><div class="price">$10</div><div class="badge">Top pick</div></div>
+          <p>The go-to option for more play and repeat sessions.</p>
+          <ul>
+            <li>More flexible for families</li>
+            <li>Great for small groups</li>
+            <li>Awesome gift idea</li>
+          </ul>
+          <a class="btn" href="order.html?product=combo">Buy Combo</a>
+        </div>
+
+        <div class="product">
+          <div class="badge">For frequent play</div>
+          <h3>Beteyah Pro Set</h3>
+          <div class="price-row"><div class="price">$10</div><div class="badge">Pro build</div></div>
+          <p>Built for families who want the best version.</p>
+          <ul>
+            <li>Ideal for high-volume use</li>
+            <li>Great for training & competition</li>
+            <li>Best for “tournament mode”</li>
+          </ul>
+          <a class="btn" href="order.html?product=pro">Buy Pro Set</a>
+        </div>
+
+        <div class="product">
+          <div class="badge">Refill / extras</div>
+          <h3>Cap 12-Pack</h3>
+          <div class="price-row"><div class="price">$10</div><div class="badge">Add-on</div></div>
+          <p>Extra caps for more games, more friends, and more fun.</p>
+          <ul>
+            <li>Perfect to keep on hand</li>
+            <li>Great for parties</li>
+            <li>Ideal for group play</li>
+          </ul>
+          <a class="btn" href="order.html?product=caps12">Buy Caps</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <h2>Who Beteyah is for</h2>
+      <p class="lead">Families first — and it also works great for schools and programs.</p>
+
+      <div class="who">
+        <div class="chip">Families & kids<small>Backyards, parks, driveways, and weekend fun.</small></div>
+        <div class="chip">PE & schools<small>Simple rules, quick rotation, tons of reps.</small></div>
+        <div class="chip">Camps & clubs<small>Stations, mini tournaments, and group play.</small></div>
+        <div class="chip">Teams & training<small>Hand-eye coordination, reaction, and competition.</small></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section alt">
+    <div class="container">
+      <h2>Quick questions</h2>
+      <div class="faq">
+        <div class="mini">
+          <h3>Is it easy for kids to learn?</h3>
+          <p>Yes. Beteyah is designed to be picked up quickly—then kids (and parents) get competitive fast.</p>
+        </div>
+        <div class="mini">
+          <h3>Do I need a big field?</h3>
+          <p>Nope. Small spaces work great. Backyard, gym, driveway, park—Beteyah travels well.</p>
+        </div>
+        <div class="mini">
+          <h3>Is it safe?</h3>
+          <p>Like any game, supervision matters. It’s built for controlled contact and family-friendly play.</p>
+        </div>
+        <div class="mini">
+          <h3>When will checkout go live?</h3>
+          <p>We’re building in phases. The Buy buttons go to an order page now, and Stripe can drop in later.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta">
+    <div class="container">
+      <div class="cta-inner">
+        <div>
+          <h2>Ready to play?</h2>
+          <p>Grab a set today and get moving—family game night starts here.</p>
+        </div>
+        <a class="btn" href="order.html">Buy Beteyah</a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© <span id="year"></span> Get Up And Play. All rights reserved.</p>
+      <a href="../contact.html">info@getupandplay.com</a>
+    </div>
+  </footer>
+
+  <script src="../assets/js/main.js"></script>
+</body>
+</html>
 
