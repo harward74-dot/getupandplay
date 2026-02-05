@@ -459,3 +459,13 @@ h2{
     padding: 48px 0;
   }
 }
+.mobile-nav{
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 100%;
+  box-shadow: 0 20px 60px rgba(0,0,0,.12);
+}
+.site-header{
+  position: sticky;
+}
