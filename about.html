@@ -11,13 +11,17 @@
 <body>
 <header class="site-header">
   <div class="container header-inner">
-    <a class="brand" href="index.html">
-      <div class="brand-placeholder">Get Up And Play</div>
+    <a class="brand" href="index.html" aria-label="Get Up And Play Home">
+      <img
+        src="assets/img/get-up-and-play-logo.png"
+        alt="Get Up And Play"
+        class="brand-logo"
+      />
     </a>
 
-    <nav class="nav">
+    <nav class="nav" aria-label="Primary">
       <a href="index.html">Home</a>
-      <a href="about.html" class="is-active">About</a>
+      <a href="about.html">About</a>
       <a href="beteyah/">Beteyah</a>
       <a href="training.html">Training</a>
       <a href="programs.html">Programs</a>
@@ -25,12 +29,14 @@
       <a href="contact.html" class="btn small">Contact</a>
     </nav>
 
-    <button class="nav-toggle"><span></span><span></span><span></span></button>
+    <button class="nav-toggle" aria-label="Open menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
   </div>
 
   <div class="mobile-nav" hidden>
     <a href="index.html">Home</a>
-    <a href="about.html" class="is-active">About</a>
+    <a href="about.html">About</a>
     <a href="beteyah/">Beteyah</a>
     <a href="training.html">Training</a>
     <a href="programs.html">Programs</a>
@@ -38,6 +44,7 @@
     <a href="contact.html">Contact</a>
   </div>
 </header>
+
 
 <main>
   <section class="section">
