@@ -491,3 +491,15 @@ h2{
   .nav{ display:none; }
   .nav-toggle{ display:flex; }
 }
+/* Brand logo */
+.brand-logo{
+  height: 46px;
+  width: auto;
+  display: block;
+}
+
+@media (max-width: 900px){
+  .brand-logo{
+    height: 38px;
+  }
+}
