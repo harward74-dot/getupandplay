@@ -3,38 +3,34 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Beteyah | Get Up And Play</title>
-  <meta name="description" content="Beteyah is a fast, fun, play-anywhere bat-and-cap game built for families, schools, and camps." />
+  <title>Play Vitilla | Get Up And Play</title>
+  <meta name="description" content="Play Vitilla is a complete small-space baseball system rooted in Dominican tradition—built to develop hitting, fielding, and throwing anywhere." />
 
-  <link rel="icon" href="../assets/favicons/favicon-32.png" sizes="32x32" />
-  <link rel="icon" href="../assets/favicons/favicon-16.png" sizes="16x16" />
-  <link rel="apple-touch-icon" href="../assets/favicons/apple-touch-180.png" />
-
-  <link rel="stylesheet" href="../assets/css/style.css" />
+  <link rel="stylesheet" href="/assets/css/style.css" />
 
   <style>
-    .page-hero{
-      padding: 46px 0 22px;
+    .pv-hero{
+      padding: 48px 0 28px;
       background:
-        radial-gradient(900px 420px at 12% 20%, rgba(32,176,240,.18), transparent 60%),
+        radial-gradient(900px 420px at 12% 20%, rgba(32,176,240,.16), transparent 60%),
         radial-gradient(900px 420px at 85% 40%, rgba(138,43,226,.12), transparent 60%),
         linear-gradient(180deg, #fff, var(--bg2));
       border-bottom:1px solid var(--line);
     }
-    .page-hero-grid{
+    .pv-hero-grid{
       display:grid;
       grid-template-columns: 1.2fr .8fr;
       gap:18px;
       align-items:stretch;
     }
-    .hero-box{
+    .pv-box{
       border:1px solid var(--line);
       border-radius:24px;
       background:#fff;
       box-shadow: var(--shadow);
       padding:20px;
     }
-    .kicker{
+    .pv-kicker{
       display:inline-flex;
       gap:8px;
       align-items:center;
@@ -44,160 +40,76 @@
       font-weight:900;
       background: rgba(32,176,240,.08);
     }
-    .hero-title{
+    .pv-title{
       margin:12px 0 10px;
       font-size: clamp(30px, 4vw, 44px);
       letter-spacing:-.03em;
     }
-    .hero-sub{
+    .pv-sub{
       margin:0 0 14px;
       color: rgba(17,19,24,.78);
       font-size: 16.5px;
       line-height:1.6;
-      max-width: 62ch;
+      max-width: 70ch;
     }
-    .hero-actions{
+    .pv-actions{
       display:flex;
       gap:12px;
       flex-wrap:wrap;
       margin-top:12px;
     }
-    .hero-actions .btn.ghost{
+    .pv-actions .btn.ghost{
       background:#fff;
       color:var(--text);
       border:1px solid var(--line);
       box-shadow:none;
     }
-    .hero-side{
+    .pv-side{
       display:flex;
       flex-direction:column;
       gap:12px;
     }
-    .mini{
+    .pv-mini{
       border:1px solid var(--line);
       border-radius:18px;
       background:#fff;
       box-shadow: var(--shadow);
       padding:14px;
     }
-    .mini h3{
-      margin:0 0 6px;
-      font-size:16px;
-      letter-spacing:-.01em;
-    }
-    .mini p{
-      margin:0;
-      color: rgba(17,19,24,.72);
-      font-weight:600;
-      line-height:1.5;
-    }
+    .pv-mini h3{ margin:0 0 6px; font-size:16px; letter-spacing:-.01em; }
+    .pv-mini p{ margin:0; color: rgba(17,19,24,.72); font-weight:650; line-height:1.5; }
 
-    .media{
-      padding: 34px 0;
-      background:#fff;
-    }
-    .media-top{
-      display:flex;
-      align-items:flex-end;
-      justify-content:space-between;
-      gap:14px;
-      flex-wrap:wrap;
-      margin-bottom:14px;
-    }
-    .media-top p{
-      margin:0;
-      color: rgba(17,19,24,.72);
-      font-weight:650;
-      max-width: 70ch;
-    }
-    .grid-media{
-      display:grid;
-      grid-template-columns: repeat(12, 1fr);
-      gap:12px;
-    }
-    .tile{
-      border:1px solid var(--line);
-      border-radius:18px;
-      background: linear-gradient(135deg, rgba(32,176,240,.18), rgba(138,43,226,.10));
-      box-shadow: var(--shadow);
-      overflow:hidden;
-      position:relative;
-      min-height: 160px;
-      display:flex;
-      align-items:flex-end;
-      padding:14px;
-      color: rgba(17,19,24,.78);
-      font-weight:900;
-      letter-spacing:-.01em;
-    }
-    .tile:before{
-      content:"";
-      position:absolute;
-      inset:0;
-      background: radial-gradient(600px 260px at 25% 25%, rgba(255,255,255,.35), transparent 55%);
-      pointer-events:none;
-    }
-    .tile span{ position:relative; }
-    .tile.big{ grid-column: span 7; min-height: 320px; }
-    .tile.small{ grid-column: span 5; }
-    .tile.third{ grid-column: span 4; min-height: 180px; }
-
-    /* Swap these images later by uploading files into assets/img/ */
-    .tile.big{ background-image:url('../assets/img/beteyah-1.jpg'); background-size:cover; background-position:center; }
-    .tile.small{ background-image:url('../assets/img/beteyah-2.jpg'); background-size:cover; background-position:center; }
-    .tile.third.t3{ background-image:url('../assets/img/beteyah-3.jpg'); background-size:cover; background-position:center; }
-    .tile.third.t4{ background-image:url('../assets/img/beteyah-4.jpg'); background-size:cover; background-position:center; }
-    .tile.third.t5{ background-image:url('../assets/img/beteyah-5.jpg'); background-size:cover; background-position:center; }
-
-    .overlay-label{
-      background:rgba(255,255,255,.82);
-      border:1px solid rgba(255,255,255,.65);
-      backdrop-filter: blur(8px);
-      padding:8px 10px;
-      border-radius:999px;
-      display:inline-flex;
-      gap:8px;
-      align-items:center;
-      box-shadow: 0 14px 40px rgba(0,0,0,.16);
-    }
-
-    .how-grid{
+    .pv-grid{
       display:grid;
       grid-template-columns: repeat(3, 1fr);
       gap:14px;
       margin-top:16px;
     }
-    .how{
+    .pv-card{
       border:1px solid var(--line);
       border-radius:18px;
       background:#fff;
       box-shadow: var(--shadow);
       padding:16px;
-      position:relative;
-      overflow:hidden;
     }
-    .how:before{
-      content:"";
-      position:absolute;
-      inset:-40% -40% auto auto;
-      width:220px;
-      height:220px;
-      background: radial-gradient(circle, rgba(32,176,240,.16), transparent 60%);
-      transform: rotate(12deg);
-    }
-    .how:nth-child(2):before{ background: radial-gradient(circle, rgba(138,43,226,.12), transparent 60%); }
-    .how:nth-child(3):before{ background: radial-gradient(circle, rgba(32,176,240,.10), transparent 60%); }
-    .how *{ position:relative; }
-    .how h3{ margin:0 0 8px; font-size:18px; }
-    .how p{ margin:0; color: rgba(17,19,24,.74); font-weight:650; }
+    .pv-card h3{ margin:0 0 8px; font-size:18px; }
+    .pv-card p{ margin:0; color: rgba(17,19,24,.74); font-weight:650; line-height:1.55; }
 
-    .products{
+    .pv-rules{
       display:grid;
-      grid-template-columns: repeat(4, 1fr);
+      grid-template-columns: 1fr 1fr;
+      gap:14px;
+      margin-top:16px;
+    }
+
+    .pv-products{
+      display:grid;
+      grid-template-columns: repeat(3, 1fr);
       gap:14px;
       margin-top:18px;
+      align-items:stretch;
     }
-    .product{
+    .pv-product{
       border:1px solid var(--line);
       border-radius:18px;
       background:#fff;
@@ -206,21 +118,10 @@
       display:flex;
       flex-direction:column;
       gap:10px;
-      overflow:hidden;
       position:relative;
+      overflow:hidden;
     }
-    .product:before{
-      content:"";
-      position:absolute;
-      inset:-40% -40% auto auto;
-      width:240px;
-      height:240px;
-      background: radial-gradient(circle, rgba(32,176,240,.14), transparent 60%);
-      transform: rotate(12deg);
-    }
-    .product *{ position:relative; }
-
-    .badge{
+    .pv-badge{
       display:inline-flex;
       align-items:center;
       justify-content:center;
@@ -232,7 +133,7 @@
       color: rgba(17,19,24,.78);
       width:max-content;
     }
-    .price-row{
+    .pv-price-row{
       display:flex;
       align-items:baseline;
       justify-content:space-between;
@@ -242,34 +143,45 @@
       border:1px solid var(--line);
       background: rgba(246,247,249,.75);
     }
-    .price{
+    .pv-price{
       font-weight:1000;
       font-size:22px;
       letter-spacing:-.02em;
     }
-    .product h3{ margin:0; font-size:18px; letter-spacing:-.01em; }
-    .product p{
-      margin:0;
-      color: rgba(17,19,24,.74);
-      font-weight:650;
-      line-height:1.55;
-    }
-    .product ul{
-      margin:0;
-      padding-left:18px;
-      color: rgba(17,19,24,.76);
-      font-weight:650;
-      line-height:1.55;
-    }
-    .product .btn{ width:100%; }
+    .pv-product h3{ margin:0; font-size:18px; letter-spacing:-.01em; }
+    .pv-product p{ margin:0; color: rgba(17,19,24,.74); font-weight:650; line-height:1.55; }
+    .pv-product ul{ margin:0; padding-left:18px; color: rgba(17,19,24,.76); font-weight:650; line-height:1.55; }
+    .pv-product .btn{ width:100%; }
 
-    .who{
+    .pv-highlight{
+      border-width:2px;
+      box-shadow: 0 18px 60px rgba(16,32,80,.14);
+    }
+    .pv-highlight::before{
+      content:"";
+      position:absolute;
+      inset:0;
+      background: radial-gradient(700px 260px at 30% 10%, rgba(32,176,240,.12), transparent 55%);
+      pointer-events:none;
+    }
+    .pv-pop{
+      position:absolute;
+      top:12px;
+      right:12px;
+      padding:6px 10px;
+      border-radius:999px;
+      background: rgba(32,176,240,.14);
+      border:1px solid var(--line);
+      font-weight:1000;
+    }
+
+    .pv-replacements{
+      margin-top:16px;
       display:grid;
       grid-template-columns: repeat(4, 1fr);
       gap:12px;
-      margin-top:16px;
     }
-    .who .chip{
+    .pv-chip{
       border-radius:18px;
       text-align:left;
       padding:14px 14px;
@@ -278,7 +190,7 @@
       border:1px solid var(--line);
       box-shadow: var(--shadow);
     }
-    .who .chip small{
+    .pv-chip small{
       display:block;
       font-weight:650;
       color: rgba(17,19,24,.70);
@@ -286,7 +198,39 @@
       line-height:1.45;
     }
 
-    .faq{
+    .pv-media{
+      display:grid;
+      grid-template-columns: repeat(12, 1fr);
+      gap:12px;
+      margin-top:14px;
+    }
+    .pv-tile{
+      border:1px solid var(--line);
+      border-radius:18px;
+      background: linear-gradient(135deg, rgba(32,176,240,.18), rgba(138,43,226,.10));
+      box-shadow: var(--shadow);
+      overflow:hidden;
+      min-height: 160px;
+      display:flex;
+      align-items:flex-end;
+      padding:14px;
+      font-weight:900;
+      color: rgba(17,19,24,.78);
+      position:relative;
+    }
+    .pv-tile:before{
+      content:"";
+      position:absolute;
+      inset:0;
+      background: radial-gradient(600px 260px at 25% 25%, rgba(255,255,255,.35), transparent 55%);
+      pointer-events:none;
+    }
+    .pv-tile span{ position:relative; background:rgba(255,255,255,.82); border:1px solid rgba(255,255,255,.65); padding:8px 10px; border-radius:999px; backdrop-filter: blur(8px); }
+    .pv-tile.big{ grid-column: span 7; min-height: 320px; }
+    .pv-tile.small{ grid-column: span 5; }
+    .pv-tile.third{ grid-column: span 4; min-height: 180px; }
+
+    .pv-faq{
       display:grid;
       grid-template-columns: repeat(2, 1fr);
       gap:14px;
@@ -294,246 +238,313 @@
     }
 
     @media (max-width: 900px){
-      .page-hero-grid{ grid-template-columns: 1fr; }
-      .grid-media{ grid-template-columns: 1fr; }
-      .tile.big, .tile.small, .tile.third{ grid-column: auto; }
-      .tile.big{ min-height: 240px; }
-      .tile.small{ min-height: 200px; }
-      .how-grid{ grid-template-columns:1fr; }
-      .products{ grid-template-columns:1fr; }
-      .who{ grid-template-columns:1fr; }
-      .faq{ grid-template-columns:1fr; }
+      .pv-hero-grid{ grid-template-columns: 1fr; }
+      .pv-grid{ grid-template-columns: 1fr; }
+      .pv-rules{ grid-template-columns: 1fr; }
+      .pv-products{ grid-template-columns: 1fr; }
+      .pv-replacements{ grid-template-columns: 1fr; }
+      .pv-media{ grid-template-columns: 1fr; }
+      .pv-tile.big, .pv-tile.small, .pv-tile.third{ grid-column:auto; }
+      .pv-tile.big{ min-height: 240px; }
+      .pv-tile.small{ min-height: 200px; }
+      .pv-faq{ grid-template-columns: 1fr; }
     }
   </style>
 </head>
-
 <body>
-  <header class="site-header">
-    <div class="container header-inner">
-      <a class="brand" href="../index.html" aria-label="Get Up And Play Home">
-        <div class="brand-placeholder">Get Up And Play</div>
-      </a>
 
-      <nav class="nav" aria-label="Primary">
-        <a href="../index.html">Home</a>
-        <a href="../about.html">About</a>
-        <a href="index.html" class="is-active">Beteyah</a>
-        <a href="../training.html">Training</a>
-        <a href="../programs.html">Programs</a>
-        <a href="../gallery.html">Gallery</a>
-        <a href="../contact.html" class="btn small">Contact</a>
-      </nav>
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="brand" href="/index.html" aria-label="Get Up And Play Home">
+      <img src="/assets/img/guap-logo.jpg" alt="Get Up And Play" class="brand-logo" />
+    </a>
 
-      <button class="nav-toggle" aria-label="Open menu" aria-expanded="false">
-        <span></span><span></span><span></span>
-      </button>
-    </div>
+    <nav class="nav" aria-label="Primary">
+      <a href="/index.html">Home</a>
+      <a href="/about.html">About</a>
+      <a href="/vitilla/" class="is-active">Play Vitilla</a>
+      <a href="/training.html">Training</a>
+      <a href="/programs.html">Programs</a>
+      <a href="/gallery.html">Gallery</a>
+      <a href="/contact.html" class="btn small">Contact</a>
+    </nav>
 
-    <div class="mobile-nav" hidden>
-      <a href="../index.html">Home</a>
-      <a href="../about.html">About</a>
-      <a href="index.html" class="is-active">Beteyah</a>
-      <a href="../training.html">Training</a>
-      <a href="../programs.html">Programs</a>
-      <a href="../gallery.html">Gallery</a>
-      <a href="../contact.html">Contact</a>
-    </div>
-  </header>
+    <button class="nav-toggle" aria-label="Open menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
 
-  <section class="page-hero">
-    <div class="container page-hero-grid">
-      <div class="hero-box">
-        <div class="kicker">⚾ Family-friendly • Play anywhere</div>
-        <h1 class="hero-title">Beteyah</h1>
-        <p class="hero-sub">
-          A fast, fun bat-and-cap game that gets kids moving. Easy to learn, exciting to play, and perfect for backyards,
-          parks, gyms, and family game nights.
-        </p>
+  <div class="mobile-nav" hidden>
+    <a href="/index.html">Home</a>
+    <a href="/about.html">About</a>
+    <a href="/vitilla/" class="is-active">Play Vitilla</a>
+    <a href="/training.html">Training</a>
+    <a href="/programs.html">Programs</a>
+    <a href="/gallery.html">Gallery</a>
+    <a href="/contact.html">Contact</a>
+  </div>
+</header>
 
-        <div class="hero-actions">
-          <a class="btn" href="order.html">Buy Beteyah</a>
-          <a class="btn ghost" href="#pricing">See Sets & Pricing</a>
-        </div>
-      </div>
+<section class="pv-hero">
+  <div class="container pv-hero-grid">
+    <div class="pv-box">
+      <div class="pv-kicker">⚾ Culture-rooted • Small-space friendly • Complete skills</div>
+      <h1 class="pv-title">Train Anywhere. Play Vitilla.</h1>
+      <p class="pv-sub">
+        Play Vitilla is a complete small-space baseball system rooted in Dominican tradition—built to develop hitting,
+        fielding, and throwing anywhere: backyard, driveway, gym, or park.
+      </p>
 
-      <div class="hero-side">
-        <div class="mini">
-          <h3>✅ Kids stay active</h3>
-          <p>Quick rounds, lots of reps, and movement built into every game.</p>
-        </div>
-        <div class="mini">
-          <h3>✅ Easy setup</h3>
-          <p>Works in small spaces—no full field required.</p>
-        </div>
-        <div class="mini">
-          <h3>✅ Fun for families</h3>
-          <p>Simple rules, real competition, and laughs guaranteed.</p>
-        </div>
+      <div class="pv-actions">
+        <a class="btn" href="/vitilla/order.html">Shop Play Vitilla</a>
+        <a class="btn ghost" href="#how">How It Works</a>
       </div>
     </div>
-  </section>
 
-  <section class="media">
-    <div class="container">
-      <div class="media-top">
-        <div>
-          <h2>See Beteyah in Action</h2>
-          <p>We’ll swap in real photos tomorrow—this grid is already wired for it.</p>
-        </div>
-        <a class="btn ghost" href="#pricing">Jump to pricing</a>
+    <div class="pv-side">
+      <div class="pv-mini">
+        <h3>✅ Complete skill builder</h3>
+        <p>Hitting, fielding, throwing, footwork, and decision-making—high reps, fast pace.</p>
       </div>
-
-      <div class="grid-media">
-        <div class="tile big"><span class="overlay-label">Family game night vibe</span></div>
-        <div class="tile small"><span class="overlay-label">Backyard & park play</span></div>
-        <div class="tile third t3"><span class="overlay-label">Easy setup</span></div>
-        <div class="tile third t4"><span class="overlay-label">Kids love it</span></div>
-        <div class="tile third t5"><span class="overlay-label">Play anywhere</span></div>
+      <div class="pv-mini">
+        <h3>✅ Small spaces, big reps</h3>
+        <p>Designed for tight areas without needing a full field.</p>
+      </div>
+      <div class="pv-mini">
+        <h3>✅ Family + competition</h3>
+        <p>Simple rules that turn into real competition fast.</p>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
+<main>
   <section class="section">
     <div class="container">
-      <h2>How it works</h2>
-      <p class="lead">Simple enough for kids to learn fast. Fun enough that adults get competitive too.</p>
-
-      <div class="how-grid">
-        <div class="how">
-          <h3>Setup in minutes</h3>
-          <p>Use a yard, a driveway, a gym, or a park. Create a target/zone and you’re ready.</p>
-        </div>
-        <div class="how">
-          <h3>Hit the cap</h3>
-          <p>Quick swings, controlled contact, and tons of reps for hand-eye coordination.</p>
-        </div>
-        <div class="how">
-          <h3>Play together</h3>
-          <p>Perfect for family games, birthdays, neighborhood tournaments, and more.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="section alt" id="pricing">
-    <div class="container">
-      <h2>Sets & Pricing</h2>
-      <p class="lead">Pick a set and you’re ready to play. (Flat-rate pricing for now — adjustable later.)</p>
-
-      <div class="products">
-        <div class="product">
-          <div class="badge">Best for first-timers</div>
-          <h3>Beteyah Starter Set</h3>
-          <div class="price-row"><div class="price">$10</div><div class="badge">Easy start</div></div>
-          <p>Great for families trying Beteyah for the first time.</p>
-          <ul>
-            <li>Everything you need to get going</li>
-            <li>Perfect for backyard play</li>
-            <li>Easy to pack & travel</li>
-          </ul>
-          <a class="btn" href="order.html?product=starter">Buy Starter</a>
-        </div>
-
-        <div class="product">
-          <div class="badge">Most popular</div>
-          <h3>Beteyah Combo Kit</h3>
-          <div class="price-row"><div class="price">$10</div><div class="badge">Top pick</div></div>
-          <p>The go-to option for more play and repeat sessions.</p>
-          <ul>
-            <li>More flexible for families</li>
-            <li>Great for small groups</li>
-            <li>Awesome gift idea</li>
-          </ul>
-          <a class="btn" href="order.html?product=combo">Buy Combo</a>
-        </div>
-
-        <div class="product">
-          <div class="badge">For frequent play</div>
-          <h3>Beteyah Pro Set</h3>
-          <div class="price-row"><div class="price">$10</div><div class="badge">Pro build</div></div>
-          <p>Built for families who want the best version.</p>
-          <ul>
-            <li>Ideal for high-volume use</li>
-            <li>Great for training & competition</li>
-            <li>Best for “tournament mode”</li>
-          </ul>
-          <a class="btn" href="order.html?product=pro">Buy Pro Set</a>
-        </div>
-
-        <div class="product">
-          <div class="badge">Refill / extras</div>
-          <h3>Cap 12-Pack</h3>
-          <div class="price-row"><div class="price">$10</div><div class="badge">Add-on</div></div>
-          <p>Extra caps for more games, more friends, and more fun.</p>
-          <ul>
-            <li>Perfect to keep on hand</li>
-            <li>Great for parties</li>
-            <li>Ideal for group play</li>
-          </ul>
-          <a class="btn" href="order.html?product=caps12">Buy Caps</a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="section">
-    <div class="container">
-      <h2>Who Beteyah is for</h2>
-      <p class="lead">Families first — and it also works great for schools and programs.</p>
-
-      <div class="who">
-        <div class="chip">Families & kids<small>Backyards, parks, driveways, and weekend fun.</small></div>
-        <div class="chip">PE & schools<small>Simple rules, quick rotation, tons of reps.</small></div>
-        <div class="chip">Camps & clubs<small>Stations, mini tournaments, and group play.</small></div>
-        <div class="chip">Teams & training<small>Hand-eye coordination, reaction, and competition.</small></div>
-      </div>
+      <h2>Born From Baseball Culture</h2>
+      <p class="lead">
+        Vitilla was created in the Dominican Republic by kids who loved baseball and found a way to play anywhere.
+      </p>
+      <p>
+        When traditional gear wasn’t available, creativity took over—caps became “balls,” sticks became bats, and open
+        space became the field. Play Vitilla honors that tradition while structuring it for modern training and family play.
+      </p>
     </div>
   </section>
 
   <section class="section alt">
     <div class="container">
-      <h2>Quick questions</h2>
-      <div class="faq">
-        <div class="mini">
-          <h3>Is it easy for kids to learn?</h3>
-          <p>Yes. Beteyah is designed to be picked up quickly—then kids (and parents) get competitive fast.</p>
+      <h2>More Than a Game. A Skill Builder.</h2>
+      <p class="lead">Play Vitilla keeps the complete game in play—so skills transfer to real baseball.</p>
+
+      <div class="pv-grid">
+        <div class="pv-card">
+          <h3>Hitting precision</h3>
+          <p>Barrel control, contact quality, and hand-eye coordination from a small, challenging target.</p>
         </div>
-        <div class="mini">
-          <h3>Do I need a big field?</h3>
-          <p>Nope. Small spaces work great. Backyard, gym, driveway, park—Beteyah travels well.</p>
+        <div class="pv-card">
+          <h3>Reaction fielding</h3>
+          <p>Quick reads, first step, secure-under-pressure fielding that keeps defenders engaged.</p>
         </div>
-        <div class="mini">
-          <h3>Is it safe?</h3>
-          <p>Like any game, supervision matters. It’s built for controlled contact and family-friendly play.</p>
+        <div class="pv-card">
+          <h3>Throwing under time</h3>
+          <p>Fast glove-to-hand transfers and accurate throws—made harder by the pace of the game.</p>
         </div>
-        <div class="mini">
-          <h3>When will checkout go live?</h3>
-          <p>We’re building in phases. The Buy buttons go to an order page now, and Stripe can drop in later.</p>
+        <div class="pv-card">
+          <h3>Footwork + conditioning</h3>
+          <p>Constant movement and high reps build athleticism without a full practice setup.</p>
         </div>
+        <div class="pv-card">
+          <h3>Decision-making</h3>
+          <p>Quick choices, communication, and competitive awareness—every rep matters.</p>
+        </div>
+        <div class="pv-card">
+          <h3>Family competition</h3>
+          <p>Simple enough for kids to learn, competitive enough for adults to get locked in.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="how">
+    <div class="container">
+      <h2>Simple Rules. Serious Competition.</h2>
+      <p class="lead">Learn it in 60 seconds—then the reps (and trash talk) start immediately.</p>
+
+      <div class="pv-rules">
+        <div class="pv-card">
+          <h3>Game Format</h3>
+          <p>
+            One hitter at a time. No base runners—fast rotation keeps everyone engaged and moving.
+          </p>
+          <p style="margin-top:10px;">
+            Play to a set score, time limit, or “innings” depending on your group.
+          </p>
+        </div>
+        <div class="pv-card">
+          <h3>Scoring</h3>
+          <p>
+            Defense must secure the cap <strong>before it comes to a stop</strong>.
+          </p>
+          <p style="margin-top:10px;">
+            <strong>Secure + controlled throw to target = Out.</strong><br/>
+            <strong>If not secured before it stops = Run.</strong>
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section alt" id="shop">
+    <div class="container">
+      <h2>Choose Your Set</h2>
+      <p class="lead">
+        Pro → Elite → Hall of Fame. Elite is the fan favorite for a reason.
+      </p>
+
+      <div class="pv-products">
+        <div class="pv-product">
+          <div class="pv-badge">Competitive entry</div>
+          <h3>Pro Set</h3>
+          <div class="pv-price-row">
+            <div class="pv-price">$69.95</div>
+            <div class="pv-badge">Paid shipping</div>
+          </div>
+          <p>Everything you need to start competing anywhere.</p>
+          <ul>
+            <li>1 Bat</li>
+            <li>12 Caps</li>
+            <li>Great for backyard + small-space play</li>
+          </ul>
+          <a class="btn" href="/vitilla/order.html?product=pro">Shop Pro</a>
+        </div>
+
+        <div class="pv-product pv-highlight">
+          <div class="pv-pop">⭐ Most Popular</div>
+          <div class="pv-badge">Complete system</div>
+          <h3>Elite Set</h3>
+          <div class="pv-price-row">
+            <div class="pv-price">$149.95</div>
+            <div class="pv-badge">Free 5-Day Shipping Included</div>
+          </div>
+          <p>Full hitting + fielding + throwing format with the target included.</p>
+          <ul>
+            <li>1 Bat</li>
+            <li>12 Caps</li>
+            <li>1 Target</li>
+            <li>Best value for families + serious reps</li>
+          </ul>
+          <a class="btn" href="/vitilla/order.html?product=elite">Shop Elite</a>
+        </div>
+
+        <div class="pv-product">
+          <div class="pv-badge">High-rep format</div>
+          <h3>Hall of Fame Set</h3>
+          <div class="pv-price-row">
+            <div class="pv-price">$199.95</div>
+            <div class="pv-badge">Free 5-Day Shipping Included</div>
+          </div>
+          <p>Built for teams, programs, and anyone who wants endless reps.</p>
+          <ul>
+            <li>1 Bat</li>
+            <li>120 Caps (bucket)</li>
+            <li>1 Target</li>
+            <li>Best for teams + tournaments + high-volume play</li>
+          </ul>
+          <a class="btn" href="/vitilla/order.html?product=hof">Shop Hall of Fame</a>
+        </div>
+      </div>
+
+      <h3 style="margin-top:26px;">Replacement & Expansion</h3>
+      <div class="pv-replacements">
+        <div class="pv-chip">Replacement Bat<small>Extra bat for family play or backups.</small></div>
+        <div class="pv-chip">12-Cap Pack<small>Quick refill for casual play.</small></div>
+        <div class="pv-chip">60-Cap Pack<small>Great for camps and groups.</small></div>
+        <div class="pv-chip">Cap Bucket (120)<small>High-rep volume for teams.</small></div>
+      </div>
+      <p class="muted" style="margin-top:12px;">(We’ll wire these add-ons into checkout later.)</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <h2>Built for</h2>
+      <div class="grid">
+        <div class="chip">Travel ball families</div>
+        <div class="chip">Backyard competitors</div>
+        <div class="chip">Camps & clinics</div>
+        <div class="chip">PE programs</div>
+        <div class="chip">Youth teams</div>
+        <div class="chip">Community events</div>
+      </div>
+      <p class="muted" style="margin-top:14px;">
+        If you want high reps in a small space, Play Vitilla fits.
+      </p>
+    </div>
+  </section>
+
+  <section class="section alt">
+    <div class="container">
+      <h2>See It In Action</h2>
+      <p class="lead">Image grid for now—videos and real media drop in next.</p>
+
+      <div class="pv-media">
+        <div class="pv-tile big"><span>Family competition</span></div>
+        <div class="pv-tile small"><span>Small-space setup</span></div>
+        <div class="pv-tile third"><span>Quick reps</span></div>
+        <div class="pv-tile third"><span>Field + throw</span></div>
+        <div class="pv-tile third"><span>Train anywhere</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <h2>FAQ</h2>
+      <div class="pv-faq">
+        <div class="pv-card">
+          <h3>How much space do I need?</h3>
+          <p>Small spaces work great—driveway, backyard, gym, or park. Adjust distance for age and safety.</p>
+        </div>
+        <div class="pv-card">
+          <h3>What ages is this for?</h3>
+          <p>Great for kids and adults. Use closer distances and supervision for younger players.</p>
+        </div>
+        <div class="pv-card">
+          <h3>Can it be played indoors?</h3>
+          <p>Yes—gyms and covered spaces work well. Make sure there’s a safe zone and clear boundaries.</p>
+        </div>
+        <div class="pv-card">
+          <h3>Do you offer bulk/program pricing?</h3>
+          <p>Yes. Contact us for school, camp, and team pricing.</p>
+        </div>
+      </div>
+
+      <div style="margin-top:18px;">
+        <a class="btn" href="/vitilla/order.html">Shop Play Vitilla</a>
+        <a class="btn ghost" href="/contact.html" style="margin-left:10px;">Contact for Programs</a>
       </div>
     </div>
   </section>
 
   <section class="cta">
-    <div class="container">
-      <div class="cta-inner">
-        <div>
-          <h2>Ready to play?</h2>
-          <p>Grab a set today and get moving—family game night starts here.</p>
-        </div>
-        <a class="btn" href="order.html">Buy Beteyah</a>
+    <div class="container cta-inner">
+      <div>
+        <h2>Ready to play?</h2>
+        <p>Choose your set and start competing today.</p>
       </div>
+      <a class="btn" href="/vitilla/order.html">Shop Play Vitilla</a>
     </div>
   </section>
+</main>
 
-  <footer class="site-footer">
-    <div class="container footer-inner">
-      <p>© <span id="year"></span> Get Up And Play. All rights reserved.</p>
-      <a href="../contact.html">info@getupandplay.com</a>
-    </div>
-  </footer>
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <p>© <span id="year"></span> Get Up And Play. All rights reserved.</p>
+    <a href="/contact.html">info@getupandplay.com</a>
+  </div>
+</footer>
 
-  <script src="../assets/js/main.js"></script>
+<script src="/assets/js/main.js"></script>
 </body>
 </html>
-
