@@ -3,9 +3,9 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Order Beteyah | Get Up And Play</title>
-  <meta name="description" content="Order Beteyah sets directly from Get Up And Play." />
-  <link rel="stylesheet" href="../assets/css/style.css" />
+  <title>Order Play Vitilla | Get Up And Play</title>
+  <meta name="description" content="Order Play Vitilla sets directly from Get Up And Play." />
+  <link rel="stylesheet" href="/assets/css/style.css" />
 
   <style>
     .wrap{ padding:52px 0; background: linear-gradient(180deg, #fff, var(--bg2)); }
@@ -20,13 +20,8 @@
     }
     .panel h1{ margin:0 0 8px; letter-spacing:-.03em; }
     .panel p{ margin:0 0 14px; color:rgba(17,19,24,.74); font-weight:650; }
-
     form{ margin-top:14px; }
-    .grid2{
-      display:grid;
-      grid-template-columns: 1fr 1fr;
-      gap:12px;
-    }
+    .grid2{ display:grid; grid-template-columns: 1fr 1fr; gap:12px; }
     label{ display:block; font-weight:900; margin:10px 0 6px; }
     input, select, textarea{
       width:100%;
@@ -53,7 +48,16 @@
     }
     .hint{ color:rgba(17,19,24,.68); font-weight:650; margin-top:10px; }
     .fine{ margin-top:10px; font-size:13px; color:rgba(17,19,24,.62); font-weight:600; }
-
+    .note{
+      margin-top:12px;
+      padding:12px 12px;
+      border-radius:14px;
+      border:1px solid var(--line);
+      background: rgba(246,247,249,.75);
+      color: rgba(17,19,24,.72);
+      font-weight:650;
+      line-height:1.5;
+    }
     @media (max-width: 700px){
       .grid2{ grid-template-columns:1fr; }
       .actions .btn{ width:100%; }
@@ -62,136 +66,139 @@
 </head>
 
 <body>
-  <header class="site-header">
-    <div class="container header-inner">
-      <a class="brand" href="../index.html" aria-label="Get Up And Play Home">
-        <div class="brand-placeholder">Get Up And Play</div>
-      </a>
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="brand" href="/index.html" aria-label="Get Up And Play Home">
+      <img src="/assets/img/guap-logo.jpg" alt="Get Up And Play" class="brand-logo" />
+    </a>
 
-      <nav class="nav" aria-label="Primary">
-        <a href="../index.html">Home</a>
-        <a href="../about.html">About</a>
-        <a href="index.html" class="is-active">Beteyah</a>
-        <a href="../training.html">Training</a>
-        <a href="../programs.html">Programs</a>
-        <a href="../gallery.html">Gallery</a>
-        <a href="../contact.html" class="btn small">Contact</a>
-      </nav>
+    <nav class="nav" aria-label="Primary">
+      <a href="/index.html">Home</a>
+      <a href="/about.html">About</a>
+      <a href="/vitilla/" class="is-active">Play Vitilla</a>
+      <a href="/training.html">Training</a>
+      <a href="/programs.html">Programs</a>
+      <a href="/gallery.html">Gallery</a>
+      <a href="/contact.html" class="btn small">Contact</a>
+    </nav>
 
-      <button class="nav-toggle" aria-label="Open menu" aria-expanded="false">
-        <span></span><span></span><span></span>
-      </button>
-    </div>
+    <button class="nav-toggle" aria-label="Open menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
 
-    <div class="mobile-nav" hidden>
-      <a href="../index.html">Home</a>
-      <a href="../about.html">About</a>
-      <a href="index.html" class="is-active">Beteyah</a>
-      <a href="../training.html">Training</a>
-      <a href="../programs.html">Programs</a>
-      <a href="../gallery.html">Gallery</a>
-      <a href="../contact.html">Contact</a>
-    </div>
-  </header>
+  <div class="mobile-nav" hidden>
+    <a href="/index.html">Home</a>
+    <a href="/about.html">About</a>
+    <a href="/vitilla/" class="is-active">Play Vitilla</a>
+    <a href="/training.html">Training</a>
+    <a href="/programs.html">Programs</a>
+    <a href="/gallery.html">Gallery</a>
+    <a href="/contact.html">Contact</a>
+  </div>
+</header>
 
-  <main class="wrap">
-    <div class="container">
-      <div class="panel">
-        <h1>Order Beteyah</h1>
-        <p>Checkout is coming soon. For now, submit an order request and we’ll confirm details + fulfillment.</p>
+<main class="wrap">
+  <div class="container">
+    <div class="panel">
+      <h1>Order Play Vitilla</h1>
+      <p>Checkout is coming soon. For now, submit an order request and we’ll confirm details + fulfillment.</p>
 
-        <form id="orderForm">
-          <div class="grid2">
-            <div>
-              <label for="name">Full Name</label>
-              <input id="name" required placeholder="First + Last" />
-            </div>
-            <div>
-              <label for="email">Email</label>
-              <input id="email" type="email" required placeholder="you@email.com" />
-            </div>
-          </div>
-
-          <div class="grid2">
-            <div>
-              <label for="product">Product</label>
-              <select id="product" required>
-                <option value="">Select a product…</option>
-                <option value="Beteyah Starter Set ($10)">Beteyah Starter Set ($10)</option>
-                <option value="Beteyah Combo Kit ($10)">Beteyah Combo Kit ($10)</option>
-                <option value="Beteyah Pro Set ($10)">Beteyah Pro Set ($10)</option>
-                <option value="Cap 12-Pack ($10)">Cap 12-Pack ($10)</option>
-              </select>
-            </div>
-            <div>
-              <label for="qty">Quantity</label>
-              <input id="qty" type="number" min="1" value="1" required />
-            </div>
-          </div>
-
-          <div>
-            <label for="address">Shipping Address</label>
-            <textarea id="address" required placeholder="Street, City, State, ZIP"></textarea>
-          </div>
-
-          <div>
-            <label for="notes">Notes (optional)</label>
-            <textarea id="notes" placeholder="Any special requests or questions?"></textarea>
-          </div>
-
-          <div class="actions">
-            <button class="btn" type="submit">Submit Order Request</button>
-            <a class="btn ghost" href="index.html">Back to Beteyah</a>
-          </div>
-
-          <div class="hint">After you submit, your email app will open with the order details prefilled.</div>
-          <div class="fine">(We’ll replace this with Stripe checkout later without changing the page layout.)</div>
-        </form>
+      <div class="note">
+        <strong>Shipping:</strong> Elite Set and Hall of Fame Set include <strong>Free 5-Day Shipping</strong>. Pro Set shipping is paid.
       </div>
+
+      <form id="orderForm">
+        <div class="grid2">
+          <div>
+            <label for="name">Full Name</label>
+            <input id="name" required placeholder="First + Last" />
+          </div>
+          <div>
+            <label for="email">Email</label>
+            <input id="email" type="email" required placeholder="you@email.com" />
+          </div>
+        </div>
+
+        <div class="grid2">
+          <div>
+            <label for="product">Product</label>
+            <select id="product" required>
+              <option value="">Select a set…</option>
+              <option value="Play Vitilla Pro Set — $69.95 (Paid Shipping)">Play Vitilla Pro Set — $69.95 (Paid Shipping)</option>
+              <option value="Play Vitilla Elite Set — $149.95 (Free 5-Day Shipping Included)">Play Vitilla Elite Set — $149.95 (Free 5-Day Shipping Included)</option>
+              <option value="Play Vitilla Hall of Fame Set — $199.95 (Free 5-Day Shipping Included)">Play Vitilla Hall of Fame Set — $199.95 (Free 5-Day Shipping Included)</option>
+            </select>
+          </div>
+          <div>
+            <label for="qty">Quantity</label>
+            <input id="qty" type="number" min="1" value="1" required />
+          </div>
+        </div>
+
+        <div>
+          <label for="address">Shipping Address</label>
+          <textarea id="address" required placeholder="Street, City, State, ZIP"></textarea>
+        </div>
+
+        <div>
+          <label for="notes">Notes (optional)</label>
+          <textarea id="notes" placeholder="Any special requests, bulk/program inquiry, or questions?"></textarea>
+        </div>
+
+        <div class="actions">
+          <button class="btn" type="submit">Submit Order Request</button>
+          <a class="btn ghost" href="/vitilla/">Back to Play Vitilla</a>
+        </div>
+
+        <div class="hint">After you submit, your email app will open with the order details prefilled.</div>
+        <div class="fine">(We’ll replace this with Stripe checkout later without changing the page layout.)</div>
+      </form>
     </div>
-  </main>
+  </div>
+</main>
 
-  <footer class="site-footer">
-    <div class="container footer-inner">
-      <p>© <span id="year"></span> Get Up And Play. All rights reserved.</p>
-      <a href="../contact.html">info@getupandplay.com</a>
-    </div>
-  </footer>
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <p>© <span id="year"></span> Get Up And Play. All rights reserved.</p>
+    <a href="/contact.html">info@getupandplay.com</a>
+  </div>
+</footer>
 
-  <script src="../assets/js/main.js"></script>
-  <script>
-    const params = new URLSearchParams(window.location.search);
-    const p = (params.get('product') || '').toLowerCase();
-    const productEl = document.getElementById('product');
-    const map = {
-      starter: "Beteyah Starter Set ($10)",
-      combo: "Beteyah Combo Kit ($10)",
-      pro: "Beteyah Pro Set ($10)",
-      caps12: "Cap 12-Pack ($10)"
-    };
-    if (map[p]) productEl.value = map[p];
+<script src="/assets/js/main.js"></script>
+<script>
+  const params = new URLSearchParams(window.location.search);
+  const p = (params.get('product') || '').toLowerCase();
+  const productEl = document.getElementById('product');
 
-    document.getElementById('orderForm').addEventListener('submit', (e) => {
-      e.preventDefault();
-      const name = document.getElementById('name').value.trim();
-      const email = document.getElementById('email').value.trim();
-      const product = productEl.value;
-      const qty = document.getElementById('qty').value;
-      const address = document.getElementById('address').value.trim();
-      const notes = document.getElementById('notes').value.trim();
+  const map = {
+    pro: "Play Vitilla Pro Set — $69.95 (Paid Shipping)",
+    elite: "Play Vitilla Elite Set — $149.95 (Free 5-Day Shipping Included)",
+    hof: "Play Vitilla Hall of Fame Set — $199.95 (Free 5-Day Shipping Included)"
+  };
+  if (map[p]) productEl.value = map[p];
 
-      const subject = encodeURIComponent(`Beteyah Order Request — ${name}`);
-      const body = encodeURIComponent(
-        `Name: ${name}\n` +
-        `Email: ${email}\n` +
-        `Product: ${product}\n` +
-        `Quantity: ${qty}\n\n` +
-        `Shipping Address:\n${address}\n\n` +
-        `Notes:\n${notes || "N/A"}\n`
-      );
+  document.getElementById('orderForm').addEventListener('submit', (e) => {
+    e.preventDefault();
+    const name = document.getElementById('name').value.trim();
+    const email = document.getElementById('email').value.trim();
+    const product = productEl.value;
+    const qty = document.getElementById('qty').value;
+    const address = document.getElementById('address').value.trim();
+    const notes = document.getElementById('notes').value.trim();
 
-      window.location.href = `mailto:info@getupandplay.com?subject=${subject}&body=${body}`;
-    });
-  </script>
+    const subject = encodeURIComponent(`Play Vitilla Order Request — ${name}`);
+    const body = encodeURIComponent(
+      `Name: ${name}\n` +
+      `Email: ${email}\n` +
+      `Product: ${product}\n` +
+      `Quantity: ${qty}\n\n` +
+      `Shipping Address:\n${address}\n\n` +
+      `Notes:\n${notes || "N/A"}\n`
+    );
+
+    window.location.href = `mailto:info@getupandplay.com?subject=${subject}&body=${body}`;
+  });
+</script>
 </body>
 </html>
